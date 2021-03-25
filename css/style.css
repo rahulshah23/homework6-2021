@@ -1,0 +1,264 @@
+/*Begin your code here*/
+/*Requirement 1*/
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/concrete_seamless.png");
+  font-family: 'Raleway', 'sans-serif'
+  font-size: 16pt;
+}
+
+/*Requirement 2*/
+header{
+  background: #fff;
+  border-bottom: 3px solid #50C7C7;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*Requirement 3*/
+.nav_links{
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-orient: vertical;
+}
+
+
+/*Requirement 4*/
+.price{
+    min-height: 500px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    
+    
+}
+
+/*Requirement 5*/
+.package {
+margin: 12px;
+  padding: 0 0 50px 0;
+  border-radius: 7px;
+  background: #fff;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+
+}
+
+/*Requirement 6*/
+div.package header{
+  border-radius: 7px 7px 0 0;
+  background: #288080;
+  padding: 20px 0;
+  border: 2px solid #45ADAD;
+}
+
+
+/*Requirement 7*/
+.gallery{
+  min-height: 600px;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-orient: horizontal;
+}
+
+/*Requirement 8*/
+div.gallery img{
+  border: 10px #50C7C7 solid;
+  width: 300px;
+  margin: 10px;
+}
+
+/*Requirement 9*/
+#logo{
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-name: logo_grow;
+          animation-name: logo_grow;
+}
+
+/*Keyframes for animation*/
+@-webkit-keyframes logo_grow{
+  from {
+    width: 25px;
+    opacity: 0;
+  }
+  to {
+    width: 420px; 
+    opacity: 1;
+  }
+}
+
+@keyframes logo_grow{
+  from {
+    width: 25px;
+    opacity: 0;
+  }
+  to {
+    width: 420px; 
+    opacity: 1;
+  }
+
+  /*Your code here.*/
+
+} 
+
+@media screen and (min-width: 850px){
+
+  /*Requirement 10*/
+  header{
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-orient: horizontal;
+  }
+
+  /*Requirement 10*/
+  .nav_links{
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-orient: horizontal;
+  }
+
+  /*Requirement 11*/
+  .package {
+  display: -ms-flexbox;
+  display: -webkit-box;
+    display: flex;
+    -ms-flex-preferred-size: 230px;
+        flex-basis: 230px;
+  } 
+}
+
+/*Requirement 12*/
+@media screen and (prefers-reduced-motion: reduce) {
+  #logo{
+    -webkit-animation-name: logo_grow;
+            animation-name: logo_grow;
+    -webkit-animation-duration: 0;
+            animation-duration: 0; 
+    -webkit-transition-duration: 0; 
+         -o-transition-duration: 0; 
+            transition-duration: 0;
+    -webkit-animation-iteration-count: 0;
+            animation-iteration-count: 0;
+  }
+}
+
+@media print {
+
+  body{
+  background-image: none;
+
+  }
+
+  .nav_links{  
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    padding-right: 1000px;
+  }
+
+  header{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+  }
+
+  /*Requirement 11*/
+  .package {
+    border: 2px solid #45adad;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+  } 
+
+  #gallery, .gallery{
+    display: none;
+  }
+
+  div.gallery img{
+    display: none;
+  }
+
+  .price{
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+  }
+
+}
